@@ -3,6 +3,11 @@ html {
   user-select: none;
 }
 
+h1 {
+  text-align: center;
+  font-size: 30pt;
+}
+
 .form {
   margin: 1em 0;
 }
