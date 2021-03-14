@@ -13,31 +13,24 @@ h1 {
 }
 
 #cards {
-  font-size: 10pt;
+  font-size: 30pt;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   max-height: 500px;
-}
-
-@media only screen and (max-width: 660px) {
-  #cards {
-    flex-wrap: nowrap;
-  }
 }
 
 #cards table {
   margin: 10px;
   border-spacing: 0;
-  border: 10px solid lightblue;
+  border: 20px solid lightblue;
 }
 
 #cards td {
   margin: 0;
   padding: 5px;
-  width: 20px;
-  height: 20px;
-  border: 1px solid grey;
+  width: 80px;
+  height: 80px;
+  border: 2px solid grey;
   line-height: 2em;
   text-align: center;
   cursor: pointer;
@@ -51,4 +44,25 @@ h1 {
 #cards td.called {
   background-color: green;
   color: white;
+}
+
+@media only screen and (min-width: 990px) {
+  h1 {
+    font-size: 24pt;
+  }
+
+  #cards {
+    font-size: 10pt;
+    flex-wrap: wrap;
+  }
+
+  #cards table {
+    border-width: 10px;
+  }
+
+  #cards td {
+    width: 20px;
+    height: 20px;
+    border: 1px solid grey;
+  }
 }
