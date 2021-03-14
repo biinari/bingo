@@ -24,6 +24,8 @@ class BingoCards {
           cell.addEventListener('click', (event) => {
             this.toggleCell(cell);
           });
+        } else {
+          cell.className = 'blank';
         }
       }
       table.appendChild(row);
