@@ -1,0 +1,30 @@
+html {
+  font-family: sans-serif;
+}
+
+#current {
+  font-size: 16pt;
+}
+
+.form {
+  margin: 1em 0;
+}
+
+#grid table {
+}
+
+#grid td {
+  padding: 5px 10px;
+  border: 1px solid grey;
+  line-height: 2em;
+  text-align: center;
+}
+
+#grid td.called {
+  background-color: yellow;
+}
+
+#grid td.just-called {
+  background-color: green;
+  color: white;
+}
