@@ -13,24 +13,25 @@ h1 {
 }
 
 #cards {
-  font-size: 30pt;
+  font-size: 10pt;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   max-height: 500px;
 }
 
 #cards table {
   margin: 10px;
   border-spacing: 0;
-  border: 20px solid lightblue;
+  border: 10px solid lightblue;
 }
 
 #cards td {
   margin: 0;
   padding: 5px;
-  width: 80px;
-  height: 80px;
-  border: 2px solid grey;
+  width: 20px;
+  height: 20px;
+  border: 1px solid grey;
   line-height: 2em;
   text-align: center;
   cursor: pointer;
@@ -46,14 +47,219 @@ h1 {
   color: white;
 }
 
-@media only screen and (min-width: 990px) {
+@media only screen and (max-width: 1000px) {
+  h1 {
+    font-size: 36pt;
+  }
+
+  #cards {
+    font-size: 36pt;
+    flex-wrap: nowrap;
+  }
+
+  #cards table {
+    margin: 10px 1%;
+    width: 98%;
+    border-width: 20px;
+  }
+
+  #cards td {
+    line-height: 1.6em;
+    width: 80px;
+    height: 80px;
+    border-width: 2px;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  h1 {
+    font-size: 34pt;
+  }
+
+  #cards {
+    font-size: 34pt;
+  }
+
+  #cards table {
+    border-width: 20px;
+  }
+
+  #cards td {
+    line-height: 1.6em;
+    width: 75px;
+    height: 75px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  h1 {
+    font-size: 32pt;
+  }
+
+  #cards {
+    font-size: 32pt;
+  }
+
+  #cards table {
+    border-width: 20px;
+  }
+
+  #cards td {
+    line-height: 1.6em;
+    width: 72px;
+    height: 72px;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  h1 {
+    font-size: 30pt;
+  }
+
+  #cards {
+    font-size: 30pt;
+  }
+
+  #cards table {
+    border-width: 18px;
+  }
+
+  #cards td {
+    line-height: 1.6em;
+    width: 70px;
+    height: 70px;
+    border-width: 1px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  h1 {
+    font-size: 28pt;
+  }
+
+  #cards {
+    font-size: 28pt;
+  }
+
+  #cards table {
+    border-width: 16px;
+  }
+
+  #cards td {
+    line-height: 1.6em;
+    width: 65px;
+    height: 65px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  h1 {
+    font-size: 26pt;
+  }
+
+  #cards {
+    font-size: 26pt;
+  }
+
+  #cards table {
+    border-width: 14px;
+  }
+
+  #cards td {
+    line-height: 1.6em;
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
   h1 {
     font-size: 24pt;
   }
 
   #cards {
-    font-size: 10pt;
-    flex-wrap: wrap;
+    font-size: 24pt;
+  }
+
+  #cards table {
+    border-width: 14px;
+  }
+
+  #cards td {
+    line-height: 1.6em;
+    width: 54px;
+    height: 54px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  h1 {
+    font-size: 22pt;
+  }
+
+  #cards {
+    font-size: 22pt;
+  }
+
+  #cards table {
+    border-width: 12px;
+  }
+
+  #cards td {
+    line-height: 1.6em;
+    width: 48px;
+    height: 48px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 20pt;
+  }
+
+  #cards {
+    font-size: 20pt;
+  }
+
+  #cards table {
+    border-width: 12px;
+  }
+
+  #cards td {
+    line-height: 1.6em;
+    padding: 2px;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  h1 {
+    font-size: 18pt;
+  }
+
+  #cards {
+    font-size: 18pt;
+  }
+
+  #cards table {
+    border-width: 14px;
+  }
+
+  #cards td {
+    line-height: 1.6em;
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  h1 {
+    font-size: 18pt;
+  }
+
+  #cards {
+    font-size: 18pt;
   }
 
   #cards table {
@@ -61,8 +267,112 @@ h1 {
   }
 
   #cards td {
-    width: 20px;
-    height: 20px;
-    border: 1px solid grey;
+    line-height: 1.6em;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  h1 {
+    font-size: 16pt;
+  }
+
+  #cards {
+    font-size: 16pt;
+  }
+
+  #cards table {
+    border-width: 10px;
+  }
+
+  #cards td {
+    line-height: 1.6em;
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  h1 {
+    font-size: 14pt;
+  }
+
+  #cards {
+    font-size: 14pt;
+  }
+
+  #cards table {
+    border-width: 10px;
+  }
+
+  #cards td {
+    line-height: 1.5em;
+    width: 29px;
+    height: 29px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  h1 {
+    font-size: 12pt;
+  }
+
+  #cards {
+    font-size: 12pt;
+  }
+
+  #cards table {
+    border-width: 10px;
+  }
+
+  #cards td {
+    line-height: 1.5em;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  h1 {
+    font-size: 10pt;
+  }
+
+  #cards {
+    font-size: 10pt;
+  }
+
+  #cards table {
+    width: 99%;
+    margin: 6px 0.5%;
+    border-width: 8px;
+  }
+
+  #cards td {
+    line-height: 1.3em;
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media only screen and (max-width: 250px) {
+  h1 {
+    font-size: 8pt;
+  }
+
+  #cards {
+    font-size: 8pt;
+  }
+
+  #cards table {
+    margin: 5px 0.5%;
+    border-width: 6px;
+  }
+
+  #cards td {
+    padding: 1px;
+    line-height: 1.1em;
+    width: 14px;
+    height: 14px;
   }
 }
