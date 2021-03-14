@@ -34,10 +34,12 @@ html {
   border: 1px solid grey;
   line-height: 2em;
   text-align: center;
+  cursor: pointer;
 }
 
 #cards td.blank {
   background-color: #eee;
+  cursor: default;
 }
 
 #cards td.called {
