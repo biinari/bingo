@@ -1,5 +1,6 @@
 html {
   font-family: sans-serif;
+  user-select: none;
 }
 
 .form {
