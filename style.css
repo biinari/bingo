@@ -54,6 +54,36 @@ h1 {
   color: white;
 }
 
+@media only print {
+  #cards {
+    max-height: 500px;
+  }
+
+  #cards table {
+    width: 48%;
+    font-size: 12pt;
+    border-spacing: 0;
+  }
+
+  #cards td {
+    margin: 0;
+    padding: 3px;
+    line-height: 1.5em;
+    border: 1px solid grey;
+    width: 24px;
+    height: 24px;
+  }
+
+  #cards td.blank {
+    background-color: default;
+  }
+
+  #cards td.called {
+    background-color: default;
+    color: default;
+  }
+}
+
 @media only screen and (max-width: 1000px) {
   h1 {
     font-size: 36pt;

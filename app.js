@@ -87,7 +87,7 @@ class BingoCards {
   }
 }
 
-const blankCell = ''; // '\xa0';
+const blankCell = '\xa0';
 const rowLen = 9;
 const colRanges = [
   [1, 9],
