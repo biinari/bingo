@@ -10,6 +10,11 @@ html {
   margin: 1em 0;
 }
 
+#next {
+  width: 10em;
+  font-size: 16pt;
+}
+
 #grid table {
 }
 
