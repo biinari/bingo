@@ -1,5 +1,11 @@
 html {
   font-family: sans-serif;
+  max-width: 400px;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
 }
 
 #current {
@@ -19,9 +25,10 @@ html {
 }
 
 #grid td {
-  padding: 5px 10px;
+  font-size: 14pt;
+  padding: 4px 6px;
   border: 1px solid grey;
-  line-height: 2em;
+  line-height: 1.5em;
   text-align: center;
 }
 
