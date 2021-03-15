@@ -94,8 +94,9 @@ Object.freeze(calls);
 
 // Bingo caller
 class BingoCaller {
-  constructor(current, nextBtn, resetBtn) {
+  constructor(current, log, nextBtn, resetBtn) {
     this.current = current;
+    this.log = log;
     this.lastIndex = null;
     this.uncalled = Object.entries(calls);
 
@@ -112,6 +113,7 @@ class BingoCaller {
   reset() {
     this.lastIndex = null;
     this.current.innerHTML = '&nbsp;';
+    this.log.innerHTML = '';
     this.uncalled = Object.entries(calls);
     for (let i = 1; i <= 90; i++) {
       let cell = document.getElementById('grid_'+i);
@@ -146,22 +148,34 @@ class BingoCaller {
     let i = Math.floor(Math.random() * len);
     let [key, val] = this.uncalled[i];
     this.uncalled.splice(i, 1); // delete at index i
-    this.current.innerText = `${key}: ${val}`;
     if (this.lastIndex !== null) {
       let prev = document.getElementById('grid_'+this.lastIndex);
       prev.className = 'called';
+      this.prependLog(this.current.innerText);
     }
+    this.current.innerText = `${key}: ${val}`;
     let cell = document.getElementById('grid_'+key);
     cell.className = 'just-called';
     this.lastIndex = key;
+  }
+
+  prependLog(text) {
+    let log = document.createElement('div');
+    log.innerText = text;
+    if (this.log.hasChildNodes()) {
+      this.log.insertBefore(log, this.log.firstChild);
+    } else {
+      this.log.appendChild(log);
+    }
   }
 }
 
 document.addEventListener('DOMContentLoaded', (event) => {
   let current = document.getElementById('current');
+  let log = document.getElementById('log');
   let nextBtn = document.getElementById('next');
   let resetBtn = document.getElementById('reset');
-  bingo = new BingoCaller(current, nextBtn, resetBtn);
+  bingo = new BingoCaller(current, log, nextBtn, resetBtn);
 
   window.bingo = bingo;
   bingo.createTable();
