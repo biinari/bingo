@@ -92,6 +92,8 @@ const calls = {
 };
 Object.freeze(calls);
 
+const LOG_SIZE = 5;
+
 // Bingo caller
 class BingoCaller {
   constructor(current, log, nextBtn, resetBtn) {
@@ -164,6 +166,9 @@ class BingoCaller {
     log.innerText = text;
     if (this.log.hasChildNodes()) {
       this.log.insertBefore(log, this.log.firstChild);
+      if (this.log.childElementCount > LOG_SIZE) {
+        this.log.removeChild(this.log.lastElementChild);
+      }
     } else {
       this.log.appendChild(log);
     }
