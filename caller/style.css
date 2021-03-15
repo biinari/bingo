@@ -5,8 +5,14 @@ html {
 }
 
 h1 {
-  font-size: 1.3em;
+  font-size: 1.1em;
   text-align: center;
+  margin: 0.2em;
+}
+
+h3 {
+  font-size: 1em;
+  margin: 0.4em 0 0.1em 0;
 }
 
 #current {
@@ -14,7 +20,7 @@ h1 {
 }
 
 .form {
-  margin: 1em 0;
+  margin: 0.5em 0;
 }
 
 button {
