@@ -101,6 +101,7 @@ class BingoCaller {
     this.log = log;
     this.lastIndex = null;
     this.uncalled = Object.entries(calls);
+    this.finished = false;
 
     nextBtn.addEventListener('click', (event) => {
       this.next();
@@ -117,6 +118,7 @@ class BingoCaller {
     this.current.innerHTML = '&nbsp;';
     this.log.innerHTML = '';
     this.uncalled = Object.entries(calls);
+    this.finished = false;
     for (let i = 1; i <= 90; i++) {
       let cell = document.getElementById('grid_'+i);
       cell.className = '';
@@ -144,7 +146,11 @@ class BingoCaller {
   next() {
     let len = this.uncalled.length;
     if (len === 0) {
-      this.current.innerText = 'Game Over';
+      if (!this.finished) {
+        this.prependLog(this.current.innerText);
+        this.current.innerText = 'Game Over';
+        this.finished = true;
+      }
       return;
     }
     let i = Math.floor(Math.random() * len);
