@@ -70,6 +70,15 @@ button {
   }
 }
 
+#footer {
+  font-size: 0.6em;
+  margin-top: 1em;
+}
+#footer ul {
+  list-style: none;
+  line-height: 1.5em;
+}
+
 @media only screen and (max-width: 975px) { html { font-size: 33pt; } }
 @media only screen and (max-width: 950px) { html { font-size: 32pt; } }
 @media only screen and (max-width: 925px) { html { font-size: 31pt; } }

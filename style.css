@@ -54,6 +54,14 @@ h1 {
   color: white;
 }
 
+#footer {
+  margin-top: 1em;
+}
+#footer ul {
+  list-style: none;
+  line-height: 1.5em;
+}
+
 @media only print {
   #cards {
     max-height: 500px;
@@ -81,6 +89,10 @@ h1 {
   #cards td.called {
     background-color: default;
     color: default;
+  }
+
+  #footer {
+    display: none;
   }
 }
 
